@@ -1,9 +1,5 @@
 const mongoose = require('mongoose');
 const schema = mongoose.Schema
-var mongoUrl = 'mongodb+srv://surendra:surendra14@cluster0-m7gbl.mongodb.net/blood?retryWrites=true&w=majority'
-mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => console.log('Mongo is connected'))
-    .catch(err => console.log(err))
 
 const newSchema = schema({
     name: {
