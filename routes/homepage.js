@@ -3,7 +3,8 @@ const router = express.Router()
 const donar = require('../models/donar')
 
 router.get('/', (req, res) => {
-    res.render('homepage')
+    var search=0
+    res.render('homepage',{searchEle:search})
 })
 
 
@@ -26,7 +27,6 @@ router.post('/donar/details', (req, res) => {
         donar.findOne({ contactNo: req.body.contactnumber })
             .then(user => {
                 if (user) {
-                    console.log('User Exist');
                     return res.redirect('/');
                 } else {
                     var newDonar = new donar(data);

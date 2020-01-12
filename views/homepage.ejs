@@ -117,6 +117,25 @@
 
 
 <!-- div for blood group results -->
-
+<%if(searchEle){%>
+<div class="container text-center search">
+    <%dataset.forEach(ele=>{%>
+    <div class="card col-sm-12 col-md-5">
+        <div class="card-body">
+            <h5 class="card-title"><%=ele.name%></h5>
+            <h6 class="card-subtitle mb-2 text-muted"><%=ele.bloodGroup%></h6>
+            <h6 class="card-subtitle mb-2 text-muted"><i class="fas fa-phone-square-alt"
+                    style="margin-right: 5px;"></i><%=ele.contactNo%></h6>
+            <h6 class=" card-subtitle mb-2 text-muted"><i class="fas fa-map-marker-alt"
+                    style="margin-right: 5px;"></i><%=ele.presentLocation%></h6>
+            <p class="card-text"><i class="fas fa-briefcase-medical"
+                    style="margin-right: 5px;"></i><%=ele.presentMedicalStatus%></p>
+            <button class="btn btn-primary btn-sm">Request</button>
+        </div>
+    </div>
+    <br>
+    <%})%>
+</div>
+<%}%>
 
 <%-include('layouts/footer.ejs')-%>
