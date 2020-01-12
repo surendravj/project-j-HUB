@@ -95,4 +95,28 @@
     </div>
 </div>
 
+
+<!-- section for blood search -->
+<div class="container text-center">
+    <p class="blue-text">Select the Blood Group U Want</p>
+    <form action="/donar/search" method="post">
+        <select class="browser-default custom-select" name="searchblood">
+            <option value="select">Select The Blood Type</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+            <option value="A+">A+</option>
+            <option value="A-">A+</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+        </select>
+        <button type="submit" class="btn btn-lg btn-danger">Seacrh</button>
+    </form>
+</div>
+
+
+<!-- div for blood group results -->
+
+
 <%-include('layouts/footer.ejs')-%>

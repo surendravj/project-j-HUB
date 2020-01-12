@@ -18,7 +18,7 @@ const newSchema = schema({
         type: String,
         required: true
     },
-    presentMedcialStatus: {
+    presentMedicalStatus: {
         type: String,
         required: true
     },

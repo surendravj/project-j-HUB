@@ -6,7 +6,7 @@ const path = require('path');
 const mongoose = require('mongoose');
 const port = 5000;
 const homepage = require('./routes/homepage');
-
+const search=require('./routes/donarSeacrh');
 
 var mongoUrl = 'mongodb+srv://surendra:surendra14@cluster0-m7gbl.mongodb.net/blood?retryWrites=true&w=majority'
 mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -37,8 +37,8 @@ app.use(session({
 
 // connect-flash middleware
 app.use(flash())
-app.use(homepage)
-
+app.use(homepage);
+app.use(search);
 
 // server configuration
 app.listen(port, () => {
